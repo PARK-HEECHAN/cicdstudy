@@ -24,4 +24,7 @@ locals {
   http_ingress_cidr_blocks = var.http_ingress_cidr_blocks
   http_ingress_rules       = var.http_ingress_rules
   http_egress_rules        = var.http_egress_rules
+
+  # trusted_role_services   = var.trusted_role_services
+  # custom_role_policy_arns = var.custom_role_policy_arns
 }

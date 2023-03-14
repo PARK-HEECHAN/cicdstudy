@@ -9,7 +9,8 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key;
 sudo yum upgrade -y;
 sudo amazon-linux-extras install epel -y;
 
-sudo yum install jenkins java-1.8.0-openjdk-devel -y;
+sudo yum install jenkins java-11-openjdk-devel.x86_64 -y;
+#sudo amazon-linux-extras install java-openjdk11 -y;
 
 sudo systemctl daemon-reload;
 sudo systemctl start jenkins;
