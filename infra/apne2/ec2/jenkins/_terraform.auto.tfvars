@@ -22,12 +22,12 @@ key_name      = "test"
 # private_ip    = "10.0.1.140"
 
 # iam
-# trusted_role_services = ["ec2.amazonaws.com"]
-# custom_role_policy_arns = [
-#   "arn:aws:iam::aws:policy/AmazonS3FullAccess",
-#   "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
-#   "arn:aws:iam::aws:policy/AWSCodeDeployFullAccess"
-# ]
+trusted_role_services = ["ec2.amazonaws.com"]
+custom_role_policy_arns = [
+  "arn:aws:iam::aws:policy/AmazonS3FullAccess",
+  "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
+  # "arn:aws:iam::aws:policy/AWSCodeDeployFullAccess"
+]
 
 # http sg
 http_sg_description      = "HTTP Security group for Jenkins EC2 instance"
