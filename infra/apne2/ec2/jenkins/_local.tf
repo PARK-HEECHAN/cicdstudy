@@ -19,6 +19,7 @@ locals {
   ami_filters   = var.ami_filters
   instance_type = var.instance_type
   key_name      = var.key_name
+  private_ip    = var.private_ip
 
   http_sg_description      = var.http_sg_description
   http_ingress_cidr_blocks = var.http_ingress_cidr_blocks

@@ -4,29 +4,30 @@ owner = "gmlcks"
 tags  = {}
 
 # AMI
-ami_owners = ["amazon"]
+ami_owners = ["self"]
 ami_filters = [
   {
     name   = "name"
-    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+    values = ["jenkins"]
+  },
+  {
+    name = "image-id"
+    values = ["ami-0b7bdc6601072a956"]
   }
 ]
 
 # EC2
-instance_type = "t3.micro"
+# instance_type = "t3.micro"
 key_name      = "test"
-
-# EC2
-# instance_type = "m4.large"
-# key_name      = "dev"
-# private_ip    = "10.0.1.140"
+instance_type = "m4.large"
+private_ip    = "10.0.1.40"
 
 # iam
 trusted_role_services = ["ec2.amazonaws.com"]
 custom_role_policy_arns = [
   "arn:aws:iam::aws:policy/AmazonS3FullAccess",
   "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
-  # "arn:aws:iam::aws:policy/AWSCodeDeployFullAccess"
+  "arn:aws:iam::aws:policy/AWSCodeDeployFullAccess"
 ]
 
 # http sg

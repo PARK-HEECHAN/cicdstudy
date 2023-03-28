@@ -80,16 +80,16 @@ resource "aws_codebuild_project" "this" {
     security_group_ids = [local.default_sg_id]
   }
 
-  # artifacts {
-  #   type = "S3"
-  #   override_artifact_name = true
-  #   packaging = "ZIP"
-  #   location = local.bucket_artifact_name
-  #   namespace_type = "BUILD_ID"
-  # }
   artifacts {
-    type = "NO_ARTIFACTS"
+    type = "S3"
+    override_artifact_name = true
+    packaging = "ZIP"
+    location = local.bucket_artifact_name
+    namespace_type = "BUILD_ID"
   }
+  # artifacts {
+  #   type = "NO_ARTIFACTS"
+  # }
 
   tags = merge(local.tags, { Name = local.codebuild_name })
 }

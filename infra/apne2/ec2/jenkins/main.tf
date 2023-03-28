@@ -11,6 +11,7 @@ module "ec2" {
   vpc_security_group_ids      = [module.http.security_group_id, local.default_sg_id]
   iam_instance_profile        = module.iam.iam_instance_profile_name
   associate_public_ip_address = false
+  private_ip = local.private_ip
 
   tags = local.tags
 }
