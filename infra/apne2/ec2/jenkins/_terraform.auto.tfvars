@@ -8,7 +8,7 @@ ami_owners = ["self"]
 ami_filters = [
   {
     name   = "name"
-    values = ["jenkins"]
+    values = ["jenkins-ec2"]
   },
   {
     name = "image-id"

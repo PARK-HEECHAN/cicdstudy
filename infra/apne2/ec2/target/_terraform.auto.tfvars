@@ -17,7 +17,7 @@ instance_type = "t3.micro"
 key_name      = "test"
 
 target_count = 3
-#private_ips  = ["10.0.1.61"]
+# private_ips  = "10.0.3.228"
 private_ips  = ["10.0.1.61", "10.0.3.61", "10.0.1.62"]
 
 # http sg
@@ -29,5 +29,5 @@ http_egress_rules        = ["all-all"]
 trusted_role_services = ["ec2.amazonaws.com"]
 custom_role_policy_arns = [
   "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess",
-  #"arn:aws:iam::aws:policy/AmazonS3FullAccess",
+  "arn:aws:iam::aws:policy/AmazonS3FullAccess",
 ]
